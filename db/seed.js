@@ -29,11 +29,17 @@ const createProducts = () => {
   }
   return productsArr
 }
+// const arr = createProducts()
 
 const insertMockData = function() {
   // Complete me please
+  Product.insertMany(createProducts())
+    .then(() => console.log('seeeeded'))
+    .catch((err) => console.log('epid fail', err))
 
 };
+
+// insertMockData()
 
 // NOTE: DO NOT invoke this function as part of your
 // server code - it is meant to only be run once so that
