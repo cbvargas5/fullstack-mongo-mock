@@ -9,11 +9,19 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-
+      products: [],
     }
 
   }
-
+  componentDidMount() {
+    axios.get('/products')
+      .then((data) => {
+        this.setState({
+          products: data.data
+        })
+        console.log('new State: ', data.data)
+      })
+  }
   render(){
   
     return(
@@ -32,7 +40,7 @@ export default class App extends React.Component {
             <ProductViewer />
           </div>
           <div className="col-md-5 product-list-container">
-            <ProductList  />
+            <ProductList  products={this.state.products}/>
           </div>
         </div>
       </div>
