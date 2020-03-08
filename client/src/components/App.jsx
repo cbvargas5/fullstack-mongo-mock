@@ -1,7 +1,7 @@
 import React from 'react';
-import ProductList from './ProductList';
-import ProductViewer from './ProductViewer';
-import Search from './Search';
+import ProductList from './ProductList.jsx';
+import ProductViewer from './ProductViewer.jsx';
+import Search from './Search.jsx';
 
 import axios from 'axios';
 
