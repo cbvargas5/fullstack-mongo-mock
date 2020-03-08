@@ -18,7 +18,7 @@ export default class ProductViewer extends React.Component {
           products: data.data,
           view: data.data[0]
         })
-        console.log('new State: ', data.data)
+        // console.log('new State: ', data.data)
       })
   }
   // displayFirstViewer() {
@@ -40,3 +40,5 @@ export default class ProductViewer extends React.Component {
     )
   }
 }
+
+//if props

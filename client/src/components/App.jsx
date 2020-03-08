@@ -10,6 +10,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       products: [],
+      // viewer: 
     }
 
   }
@@ -19,7 +20,7 @@ export default class App extends React.Component {
         this.setState({
           products: data.data
         })
-        console.log('new State: ', data.data)
+        // console.log('new State: ', data.data)
       })
   }
   render(){
