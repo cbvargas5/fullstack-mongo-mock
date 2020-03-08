@@ -23,7 +23,10 @@ export default class App extends React.Component {
       })
   }
   render(){
-  
+    // let stuff;
+    if (this.state.products.length) {
+      let stuff = <ProductViewer products={this.state.products}/>
+    }
     return(
       <div>
         <div>
@@ -37,6 +40,7 @@ export default class App extends React.Component {
         </nav>
         <div className="row main-container">
           <div className="col-md-7 product-viewer-container">
+            {/* {this.state.products.length ? return false;} */}
             <ProductViewer />
           </div>
           <div className="col-md-5 product-list-container">
