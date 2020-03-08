@@ -14,14 +14,17 @@ const controller = {
       .catch((err) => res.status(400).send(err))
   },
   put: (req, res) => {
-    Product.updateProductHelper()
-    .then(() => res.status(200).send())
-    .catch((err) => res.status(400).send(err))
+    const _id = req.params.id;
+    const item = req.body.item
+    Product.updateProductHelper({_id}, {item})
+      .then(() => res.status(200).send())
+      .catch((err) => res.status(400).send(err))
   },
   delete: (req, res) => {
-    Product.deleteProductHelper()
-    .then(() => res.status(200).send())
-    .catch((err) => res.status(400).send(err))
+    const _id = req.params.id;
+    Product.deleteProductHelper({_id})
+      .then(() => res.status(200).send())
+      .catch((err) => res.status(400).send(err))
   }
 }
 
