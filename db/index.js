@@ -6,7 +6,7 @@ var mongoUri = 'mongodb://localhost/ebidProducts';
 mongoose.Promise = global.Promise;
 mongoose.connect(mongoUri,{
     useMongoClient: true,
-    /* other options */
+
   })
 
 // Connect Mongoose to our local MongoDB via URI specified above and export it below

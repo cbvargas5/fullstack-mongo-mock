@@ -5,6 +5,7 @@ const controller = require('./controller.js');
 
 router
   .route('/products')
+  // .get((req, res) => res.status(200).send('This is your get request dfg, modify this file to use your router!'))
   .get(controller.get)
   .post(controller.post);
 

@@ -4,11 +4,13 @@ var Product = require('../db/dbhelpers.js')
 
 const controller = {
   get: (req, res) => {
+    console.log('get test')
     Product.getProductsHelper()
       .then((data) => res.status(200).send(data))
       .catch((err) => res.status(400).send(err))
   },
   post: (req, res) => {
+    console.log('post test')
     Product.postProductsHelper(req.body)
       .then(() => res.status(200).send())
       .catch((err) => res.status(400).send(err))
